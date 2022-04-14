@@ -52,11 +52,9 @@ WHERE user_id = 26 or user_id = 12;
 
 
 -- Exercise 9
-select posts.id, posts.pub_date, following.id
-from following inner join posts on posts.user_id = following.following_id
-where following_id = 26;
-
-
+select posts.id, posts.pub_date, following.following_id
+from following inner join posts on following.following_id = posts.user_id
+where following.user_id = 26;
 
 -- Exercise 10
 
